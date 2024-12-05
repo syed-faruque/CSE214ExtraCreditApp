@@ -11,39 +11,26 @@
         android:id="@+id/key_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Key Phrase: "
+        android:text="Key:"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginBottom="24dp"
         android:textColor="@android:color/black" />
 
-    <Button
-        android:id="@+id/print_key_button"
+    <TextView
+        android:id="@+id/key"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Print Key"
-        android:layout_marginBottom="16dp" />
+        android:text=""
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="24dp" />
 
     <Button
-        android:id="@+id/change_key_button"
+        android:id="@+id/return_to_menu_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Change Key"
-        android:layout_marginBottom="16dp" />
-
-
-    <Button
-        android:id="@+id/encrypt_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Encrypt"
-        android:layout_marginBottom="16dp" />
-
-    <Button
-        android:id="@+id/decrypt_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Decrypt"
+        android:text="Return to Menu"
         android:layout_marginBottom="16dp" />
 
 </LinearLayout>

@@ -18,18 +18,10 @@ public class MainActivity extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String key = keyInput.getText().toString().trim();
-                if (key.isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Key cannot be empty", Toast.LENGTH_SHORT).show();
-                }
-                else if (!key.matches("[a-zA-Z]+")) {
-                    Toast.makeText(MainActivity.this, "Key must contain only letters", Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                    intent.putExtra("ENCRYPTION_KEY", key);
-                    startActivity(intent);
-                }
+                String key = keyInput.getText().toString().replaceAll("[^a-zA-Z]", "");
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                intent.putExtra("ENCRYPTION_KEY", key);
+                startActivity(intent);
             }
         });
     }

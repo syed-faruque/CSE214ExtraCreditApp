@@ -16,12 +16,22 @@ public class SecondActivity extends AppCompatActivity {
 
         String key = getIntent().getStringExtra("ENCRYPTION_KEY");
         TextView keyDisplay = findViewById(R.id.key_display);
-        keyDisplay.setText("Key: " + key);
+        keyDisplay.setText("Key Phrase: " + key);
 
+        Button printKeyButton = findViewById(R.id.print_key_button);
         Button changeKeyButton = findViewById(R.id.change_key_button);
         Button encryptButton = findViewById(R.id.encrypt_button);
         Button decryptButton = findViewById(R.id.decrypt_button);
 
+        printKeyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SecondActivity.this, PrintKeyActivity.class);
+                intent.putExtra("ENCRYPTION_KEY", key);
+                startActivity(intent);
+                finish();
+            }
+        });
         changeKeyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
