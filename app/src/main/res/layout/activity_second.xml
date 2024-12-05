@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/key_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Key: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/change_key_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Key"
+        android:layout_marginBottom="16dp" />
+
+
+    <Button
+        android:id="@+id/encrypt_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encrypt"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/decrypt_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decrypt"
+        android:layout_marginBottom="16dp" />
+
+</LinearLayout>
